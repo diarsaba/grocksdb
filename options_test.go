@@ -24,8 +24,8 @@ func TestOptions(t *testing.T) {
 	opts.SetMaxBackgroundCompactions(9)
 	require.EqualValues(t, 9, opts.GetMaxBackgroundCompactions())
 
-	opts.SetBaseBackgroundCompactions(4)
-	require.EqualValues(t, 4, opts.GetBaseBackgroundCompactions())
+	// opts.SetBaseBackgroundCompactions(4)
+	// require.EqualValues(t, 4, opts.GetBaseBackgroundCompactions())
 
 	opts.SetMaxBackgroundFlushes(8)
 	require.EqualValues(t, 8, opts.GetMaxBackgroundFlushes())
@@ -42,11 +42,11 @@ func TestOptions(t *testing.T) {
 	opts.SetRecycleLogFileNum(81)
 	require.EqualValues(t, 81, opts.GetRecycleLogFileNum())
 
-	opts.SetSoftRateLimit(0.8)
-	require.EqualValues(t, 0.8, opts.GetSoftRateLimit())
+	// opts.SetSoftRateLimit(0.8)
+	// require.EqualValues(t, 0.8, opts.GetSoftRateLimit())
 
-	opts.SetHardRateLimit(0.5)
-	require.EqualValues(t, 0.5, opts.GetHardRateLimit())
+	// opts.SetHardRateLimit(0.5)
+	// require.EqualValues(t, 0.5, opts.GetHardRateLimit())
 
 	opts.SetSoftPendingCompactionBytesLimit(50 << 18)
 	require.EqualValues(t, 50<<18, opts.GetSoftPendingCompactionBytesLimit())
@@ -54,8 +54,8 @@ func TestOptions(t *testing.T) {
 	opts.SetHardPendingCompactionBytesLimit(50 << 19)
 	require.EqualValues(t, 50<<19, opts.GetHardPendingCompactionBytesLimit())
 
-	opts.SetRateLimitDelayMaxMilliseconds(5000)
-	require.EqualValues(t, 5000, opts.GetRateLimitDelayMaxMilliseconds())
+	// 	opts.SetRateLimitDelayMaxMilliseconds(5000)
+	// 	require.EqualValues(t, 5000, opts.GetRateLimitDelayMaxMilliseconds())
 
 	require.EqualValues(t, uint64(0x40000000), opts.GetMaxManifestFileSize())
 	opts.SetMaxManifestFileSize(23 << 10)
@@ -99,8 +99,8 @@ func TestOptions(t *testing.T) {
 	opts.SetIsFdCloseOnExec(true)
 	require.EqualValues(t, true, opts.IsFdCloseOnExec())
 
-	opts.SetSkipLogErrorOnRecovery(true)
-	require.EqualValues(t, true, opts.SkipLogErrorOnRecovery())
+	// opts.SetSkipLogErrorOnRecovery(true)
+	// require.EqualValues(t, true, opts.SkipLogErrorOnRecovery())
 
 	opts.SetStatsDumpPeriodSec(79)
 	require.EqualValues(t, 79, opts.GetStatsDumpPeriodSec())
@@ -282,7 +282,7 @@ func TestOptions(t *testing.T) {
 	opts.SetLevel0StopWritesTrigger(47)
 	require.EqualValues(t, 47, opts.GetLevel0StopWritesTrigger())
 
-	opts.SetMaxMemCompactionLevel(4)
+	// opts.SetMaxMemCompactionLevel(4)
 
 	require.EqualValues(t, uint64(0x140000), opts.GetTargetFileSizeBase())
 	opts.SetTargetFileSizeBase(41 << 20)
@@ -306,7 +306,7 @@ func TestOptions(t *testing.T) {
 
 	opts.SetMaxBytesForLevelMultiplierAdditional([]int{2 << 20})
 
-	opts.SetPurgeRedundantKvsWhileFlush(true)
+	// opts.SetPurgeRedundantKvsWhileFlush(true)
 
 	opts.SetDbLogDir("./abc")
 	opts.SetWalDir("../asdf")
@@ -361,7 +361,7 @@ func TestOptions(t *testing.T) {
 	require.Error(t, err)
 
 	// deprecation soon
-	opts.SetTableCacheRemoveScanCountLimit(112)
+	// opts.SetTableCacheRemoveScanCountLimit(112)
 
 	opts.SetMaxWriteBufferNumberToMaintain(45)
 	require.EqualValues(t, 45, opts.GetMaxWriteBufferNumberToMaintain())
